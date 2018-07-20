@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">News</string>
+    <string name="action_search">search</string>
+    <string name="avenir_regular">avenir-next-regular.ttf</string>
+    <string name="avenir_bold">avenir-next-bold.ttf</string>
+    <string name="avenir_medium">AvenirNext-Medium.ttf</string>
+</resources>
