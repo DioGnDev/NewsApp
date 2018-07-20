@@ -72,7 +72,6 @@ class ArticleActivity: MvpActivity<ArticleView, ArticlePresenter>(), ArticleView
     }
 
     override fun itemClick(linkUrl: String) {
-        Log.d("state","urlnya adalah ${linkUrl}")
         loadFragment(WebViewFragment.newInstance(linkUrl))
     }
 
@@ -82,7 +81,6 @@ class ArticleActivity: MvpActivity<ArticleView, ArticlePresenter>(), ArticleView
 
     override fun updatePage() {
         currentPage = currentPage + 1
-        Log.d("state", "page ${currentPage}")
     }
 
     override fun showProgress() {
