@@ -79,7 +79,7 @@ class HomeAdapter(context: Context, val list: List<NewsModel>): RecyclerView.Ada
                     LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT)
 
-            layoutParams.setMargins(view.convertDpToPx(10), view.convertDpToPx(80), view.convertDpToPx(10), view.convertDpToPx(2))
+            layoutParams.setMargins(view.convertDpToPx(5), view.convertDpToPx(80), view.convertDpToPx(5), view.convertDpToPx(2))
             cardView.layoutParams = layoutParams
         }
 
@@ -92,11 +92,12 @@ class HomeAdapter(context: Context, val list: List<NewsModel>): RecyclerView.Ada
                     R.color.md_yellow_300,
                     R.color.soft_red)
 
-            if (position <= arrColor.size - 1){
-                var gd = colorView.background as GradientDrawable
-                gd.setColor(view.context.resources.getColor(arrColor[position]))
-                colorView.background = gd
-            }
+            var random = Random()
+            var colorID = random.nextInt(arrColor.size - 1)
+
+            var gd = colorView.background as GradientDrawable
+            gd.setColor(view.context.resources.getColor(arrColor[colorID]))
+            colorView.background = gd
         }
     }
 
