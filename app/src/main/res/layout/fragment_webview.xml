@@ -23,11 +23,26 @@
 
     </RelativeLayout>
 
-    <WebView
-        android:id="@+id/webView"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </WebView>
+        <WebView
+            android:id="@+id/webView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+        </WebView>
+
+        <RelativeLayout
+            android:id="@+id/containerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_centerInParent="true">
+        </RelativeLayout>
+
+    </RelativeLayout>
+
 
 </LinearLayout>
