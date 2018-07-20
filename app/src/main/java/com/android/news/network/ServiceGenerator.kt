@@ -27,10 +27,10 @@ object ServiceGenerator {
             chain.proceed(request)
         }
 
-        val logging = HttpLoggingInterceptor()
-        logging.level = HttpLoggingInterceptor.Level.BODY
+//        val logging = HttpLoggingInterceptor()
+//        logging.level = HttpLoggingInterceptor.Level.BODY
 
-        httpClient.addInterceptor(logging).connectTimeout(5, TimeUnit.MINUTES)
+        httpClient.connectTimeout(5, TimeUnit.MINUTES)
                 .writeTimeout(5, TimeUnit.MINUTES)
                 .readTimeout(5, TimeUnit.MINUTES)
         val retrofit = builder.client(httpClient.build()).build()
